@@ -1,0 +1,12 @@
+# Exported from Render on 2025-12-23T21:58:02Z
+version: "1"
+services:
+- type: web
+  name: Restro-menu
+  runtime: python
+  repo: https://github.com/SamayVishwakarma/Restro-menu
+  plan: free
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: gunicorn app:app
+  autoDeployTrigger: commit
