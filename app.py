@@ -27,5 +27,3 @@ def order():
                 total += line
     return render_template('bill.html', order_items=order_items, total=total, now=datetime.now())
 
-if __name__ == '__main__':
-    app.run(debug=True)
